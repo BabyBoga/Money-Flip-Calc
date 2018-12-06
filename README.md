@@ -2,7 +2,7 @@
 A Clone/Improvement of Kitboga's Money Flip Calc
 
 IMPROVEMENTS:
-- Allow For Floats (_can't forget the cents_)
+- Allow For Cents
 - Check If Input Is A Number
 - Fix Nubmer Overflows
 - Icon (_That i found on google_)
