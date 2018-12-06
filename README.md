@@ -5,7 +5,7 @@ IMPROVEMENTS:
 - Allow For Cents
 - Check If Input Is A Number
 - Fix Nubmer Overflows
-- Icon (_That i found on google_)
+- Icon
 - Open source
   - So **You** can make your own money flip calculator
 - Improved Code Readability
