@@ -72,15 +72,20 @@ namespace Cash_Flipper
             float inputAmount;
             int outputAmount;
 
-            //inputAmount = inputAmount.Replace(",", ".");
-
             if (float.TryParse(input.Text, out inputAmount)) {
-                outputAmount = Convert.ToInt32(inputAmount * 10);
-                output.Text = outputAmount.ToString();
+                if (inputAmount < 214700000)
+                {
+                    outputAmount = Convert.ToInt32(inputAmount * 10);
+                    output.Text = outputAmount.ToString();
+                }
+                else
+                {
+                    output.Text = "TOO MUCH MONEY!!!!";
+                }
             }
             else
             {
-                //it works dont touch
+                //it works don't touch
                 output.Text = "00F!!!1!";
                 bigBigTimer.Enabled = true;
                 notSoBigTimer.Enabled = true;
@@ -98,16 +103,17 @@ namespace Cash_Flipper
             bigBigTimer.Enabled = false;
             notSoBigTimer.Enabled = false;
             BackColor = SystemColors.Control;
-            //ForeColor = Color.Black;
         }
 
         private void notSoBigTimer_Tick(object sender, EventArgs e)
         {
-            //Copied from my other project
             Random r = new Random();
+
+            //Shake
             this.Location = new Point(this.Location.X + (r.Next(-10, 11)), this.Location.Y + (r.Next(-10, 11)));
+
+            //Random Colors
             BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), (r.Next(0, 256)));
-            //ForeColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), (r.Next(0, 256)));
         }
     }
 }
