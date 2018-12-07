@@ -86,7 +86,7 @@ namespace Cash_Flipper
             else
             {
                 //it works don't touch
-                output.Text = "00F!!!1!";
+                output.Text = "00F!";
                 bigBigTimer.Enabled = true;
                 notSoBigTimer.Enabled = true;
             }
@@ -114,6 +114,12 @@ namespace Cash_Flipper
 
             //Random Colors
             BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), (r.Next(0, 256)));
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form f2 = new SettingsForm();
+            f2.Show();
         }
     }
 }
