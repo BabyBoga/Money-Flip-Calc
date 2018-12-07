@@ -98,10 +98,10 @@
             // 
             this.output.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.output.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.output.Font = new System.Drawing.Font("Times New Roman", 14.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.output.Location = new System.Drawing.Point(11, 391);
             this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(207, 39);
+            this.output.Size = new System.Drawing.Size(207, 35);
             this.output.TabIndex = 4;
             // 
             // button2
@@ -219,9 +219,9 @@
             // buttonClear
             // 
             this.buttonClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClear.Location = new System.Drawing.Point(130, 361);
+            this.buttonClear.Location = new System.Drawing.Point(132, 361);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(87, 28);
+            this.buttonClear.Size = new System.Drawing.Size(86, 28);
             this.buttonClear.TabIndex = 15;
             this.buttonClear.Text = "clear";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(229, 438);
+            this.ClientSize = new System.Drawing.Size(229, 434);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -262,7 +262,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Money Flip Calc";
+            this.Text = "Money Flip Calc Pro";
             this.ResumeLayout(false);
             this.PerformLayout();
 

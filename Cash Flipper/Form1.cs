@@ -73,14 +73,14 @@ namespace Cash_Flipper
             int outputAmount;
 
             if (float.TryParse(input.Text, out inputAmount)) {
-                if (inputAmount < 214700000)
+                if (inputAmount < 214700000 && inputAmount > -1)
                 {
                     outputAmount = Convert.ToInt32(inputAmount * 10);
                     output.Text = outputAmount.ToString();
                 }
                 else
                 {
-                    output.Text = "TOO MUCH MONEY!!!!";
+                    output.Text = "Money machine broke";
                 }
             }
             else

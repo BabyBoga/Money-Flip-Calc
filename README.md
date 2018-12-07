@@ -2,10 +2,11 @@
 A Clone/Improvement of Kitboga's Money Flip Calc
 
 IMPROVEMENTS:
-- Allow For Floats (_can't forget the cents_)
+- Allow For Floats
 - Check If Input Is A Number
 - Fix Nubmer Overflows
-- Icon (_That i found on google_)
+- Fix Negative Numbers
+- Icon
 - Open source
   - So **You** can make your own money flip calculator
 - Improved Code Readability
