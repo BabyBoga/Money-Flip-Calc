@@ -9,9 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cash_Flipper
-{
+{ 
     public partial class Form1 : Form
     {
+        public static bool randomFail = true;
+        public Random r = new Random();
+        float inputAmount;
+        int outputAmount;
+
         public Form1()
         {
             InitializeComponent();
@@ -69,28 +74,28 @@ namespace Cash_Flipper
 
         private void button11_Click(object sender, EventArgs e)
         {
-            float inputAmount;
-            int outputAmount;
+            int i = 1;
+            if (randomFail == true){ i = r.Next(6); }
 
             if (float.TryParse(input.Text, out inputAmount)) {
-                if (inputAmount < 214700000 && inputAmount > -1)
+                if (inputAmount < 214700000 && inputAmount > -1 && i != 0)
                 {
                     outputAmount = Convert.ToInt32(inputAmount * 10);
                     output.Text = outputAmount.ToString();
                 }
-                else
-                {
-                    output.Text = "Money machine broke";
-                }
+                else{ oof(); }
             }
-            else
-            {
-                //it works don't touch
-                output.Text = "00F!";
-                bigBigTimer.Enabled = true;
-                notSoBigTimer.Enabled = true;
-            }
+            else { oof(); }
         }
+
+        private void oof()
+        {
+            //it works don't touch
+            output.Text = "00F";
+            bigBigTimer.Enabled = true;
+            notSoBigTimer.Enabled = true;
+        }
+
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
@@ -107,8 +112,6 @@ namespace Cash_Flipper
 
         private void notSoBigTimer_Tick(object sender, EventArgs e)
         {
-            Random r = new Random();
-
             //Shake
             this.Location = new Point(this.Location.X + (r.Next(-10, 11)), this.Location.Y + (r.Next(-10, 11)));
 

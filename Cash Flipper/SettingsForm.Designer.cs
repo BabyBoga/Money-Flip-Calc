@@ -28,40 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.oofCheckBox = new System.Windows.Forms.CheckBox();
+            this.moneyRainPicture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.moneyRainCheck = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyRainPicture)).BeginInit();
             this.SuspendLayout();
+            // 
+            // oofCheckBox
+            // 
+            this.oofCheckBox.AutoSize = true;
+            this.oofCheckBox.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oofCheckBox.Location = new System.Drawing.Point(8, 52);
+            this.oofCheckBox.Name = "oofCheckBox";
+            this.oofCheckBox.Size = new System.Drawing.Size(177, 22);
+            this.oofCheckBox.TabIndex = 4;
+            this.oofCheckBox.Text = "Random chance to fail";
+            this.oofCheckBox.UseVisualStyleBackColor = true;
+            this.oofCheckBox.CheckedChanged += new System.EventHandler(this.oofCheckBox_CheckedChanged);
+            // 
+            // moneyRainPicture
+            // 
+            this.moneyRainPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.moneyRainPicture.Image = global::Cash_Flipper.Properties.Resources.muneh;
+            this.moneyRainPicture.Location = new System.Drawing.Point(0, 0);
+            this.moneyRainPicture.Name = "moneyRainPicture";
+            this.moneyRainPicture.Size = new System.Drawing.Size(442, 267);
+            this.moneyRainPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.moneyRainPicture.TabIndex = 3;
+            this.moneyRainPicture.TabStop = false;
+            this.moneyRainPicture.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(18, 32);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, -4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "TODO: Add some buttons and dials and stuff";
+            this.label1.Size = new System.Drawing.Size(330, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "MONEY FLIP CALCULATOR";
             // 
-            // button1
+            // timer
             // 
-            this.button1.Location = new System.Drawing.Point(121, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 41);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button yea boiiiiiiiii";
-            this.button1.UseVisualStyleBackColor = true;
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // moneyRainCheck
+            // 
+            this.moneyRainCheck.AutoSize = true;
+            this.moneyRainCheck.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyRainCheck.Location = new System.Drawing.Point(324, 244);
+            this.moneyRainCheck.Name = "moneyRainCheck";
+            this.moneyRainCheck.Size = new System.Drawing.Size(107, 22);
+            this.moneyRainCheck.TabIndex = 6;
+            this.moneyRainCheck.Text = "Money Rain";
+            this.moneyRainCheck.UseVisualStyleBackColor = true;
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 287);
+            this.ClientSize = new System.Drawing.Size(442, 267);
+            this.Controls.Add(this.moneyRainCheck);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.oofCheckBox);
+            this.Controls.Add(this.moneyRainPicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SettingsForm";
             this.Text = "Settings DLC only 399.97$";
+            this.Load += new System.EventHandler(this.SettingsForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.moneyRainPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +109,10 @@
 
         #endregion
 
+        private System.Windows.Forms.CheckBox oofCheckBox;
+        private System.Windows.Forms.PictureBox moneyRainPicture;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.CheckBox moneyRainCheck;
     }
 }
