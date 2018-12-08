@@ -20,6 +20,7 @@ namespace Cash_Flipper
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             oofCheckBox.Checked = Form1.randomFail;
+            colorCheck.Checked = Form1.flashyColors;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -35,6 +36,9 @@ namespace Cash_Flipper
 
             if (oofCheckBox.Checked) { Form1.randomFail = true; }
             else { Form1.randomFail = false; }
+
+            if (colorCheck.Checked) { Form1.flashyColors = true; }
+            else { Form1.flashyColors = false; }
         }
 
         private void oofCheckBox_CheckedChanged(object sender, EventArgs e)

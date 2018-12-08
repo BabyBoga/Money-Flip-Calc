@@ -12,7 +12,10 @@ namespace Cash_Flipper
 { 
     public partial class Form1 : Form
     {
+        // Settings
         public static bool randomFail = true;
+        public static bool flashyColors = true;
+
         public Random r = new Random();
         float inputAmount;
         int outputAmount;
@@ -75,7 +78,7 @@ namespace Cash_Flipper
         private void button11_Click(object sender, EventArgs e)
         {
             int i = 1;
-            if (randomFail == true){ i = r.Next(6); }
+            if (randomFail == true){ i = r.Next(7); }
 
             if (float.TryParse(input.Text, out inputAmount)) {
                 if (inputAmount < 214700000 && inputAmount > -1 && i != 0)
@@ -116,7 +119,7 @@ namespace Cash_Flipper
             this.Location = new Point(this.Location.X + (r.Next(-10, 11)), this.Location.Y + (r.Next(-10, 11)));
 
             //Random Colors
-            BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), (r.Next(0, 256)));
+            if (flashyColors) { BackColor = Color.FromArgb(r.Next(30, 256), r.Next(30, 256), (r.Next(30, 256))); }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
